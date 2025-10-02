@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TutorConnect" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme -->
+    </style>
+</resources>
