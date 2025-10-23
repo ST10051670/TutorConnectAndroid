@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("com.google.gms.google-services")
+    id ("kotlin-parcelize")
+
 }
 
 android {
@@ -39,6 +41,7 @@ android {
     }
 
     buildFeatures {
+        viewBinding = true
         compose = true
     }
 }
@@ -49,6 +52,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 
     // Compose
     implementation(platform(libs.androidx.compose.bom))
@@ -62,6 +68,11 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-analytics")
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/item_background"
+    android:layout_marginBottom="6dp">
+
+<TextView
+        android:id="@+id/txtHour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="08:00 - 09:00"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
+        android:contentDescription="Time slot label"
+        tools:text="08:00 - 09:00" />
+
+    <Switch
+        android:id="@+id/switchAvailable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="48dp"
+        android:text="Available"
+        android:textSize="12sp"
+        android:contentDescription="Toggle availability for this time slot" />
+
+    <CheckBox
+        android:id="@+id/checkGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:text="Group"
+        android:textSize="12sp"
+        android:contentDescription="Enable group session" />
+
+    <EditText
+        android:id="@+id/etGroupSize"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:hint="#"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textSize="13sp"
+        android:contentDescription="Maximum number of students in group" />
+</LinearLayout>
